@@ -1,9 +1,10 @@
 import Link from "next/link";
-import Button from "./Button";
+import Button from "../Button";
+
 
 const itemsMenu = [{ title: "Home", link: "/" }, { title: "Nossas Lojas", link: "/" }, { title: "Novidades", link: "/" }, { title: "Promoções", link: "/" }];
 
-const Header = () => {
+export default function Header() {
     return (
         <header className="h-[54px] bg-black text-white flex justify-between items-center px-5">
             <ul className="flex justify-start space-x-4">
@@ -20,5 +21,3 @@ const Header = () => {
         </header>
     )
 }
-
-export default Header;
