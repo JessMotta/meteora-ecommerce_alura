@@ -24,7 +24,7 @@ export default function Header() {
             </div>
             <div className="flex justify-end items-center space-x-4">
                 <input type="text" placeholder="Digite o produto" className="bg-white text-black placeholder-(--color-gray) py-2 px-3"></input>
-                <Button>Buscar</Button>
+                <Button color="transparent">Buscar</Button>
             </div>
         </header>
     )
