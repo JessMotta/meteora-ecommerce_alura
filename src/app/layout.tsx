@@ -25,8 +25,6 @@ export default function RootLayout({
       <body className="antialiased">
         <Header/>
         {children}
-        <Info/>
-        <Newsletter/>
         <Footer/>
       </body>
     </html>
