@@ -60,7 +60,6 @@ export function CardProduct() {
                 </div>
             </div>
             ))}
-            
         </div>
 
     )
