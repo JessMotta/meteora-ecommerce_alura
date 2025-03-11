@@ -3,7 +3,14 @@ import Button from "../Button";
 import Image from "next/image";
 
 
-const itemsMenu = [{ title: "Home", link: "/" }, { title: "Nossas Lojas", link: "/" }, { title: "Novidades", link: "/" }, { title: "Promoções", link: "/" }];
+const itemsMenu = [
+    { title: "Home", link: "/" }, 
+    { title: "Nossas Lojas", link: "/" }, 
+    { title: "Novidades", link: "/" }, 
+    { title: "Promoções", link: "/" }
+];
+
+
 
 export default function Header() {
     return (
