@@ -3,7 +3,14 @@ import Button from "../Button";
 import Image from "next/image";
 
 
-const itemsMenu = [{ title: "Home", link: "/" }, { title: "Nossas Lojas", link: "/" }, { title: "Novidades", link: "/" }, { title: "Promoções", link: "/" }];
+const itemsMenu = [
+    { title: "Home", link: "/" }, 
+    { title: "Nossas Lojas", link: "/" }, 
+    { title: "Novidades", link: "/" }, 
+    { title: "Promoções", link: "/" }
+];
+
+
 
 export default function Header() {
     return (
@@ -24,7 +31,7 @@ export default function Header() {
             </div>
             <div className="flex justify-end items-center space-x-4">
                 <input type="text" placeholder="Digite o produto" className="bg-white text-black placeholder-(--color-gray) py-2 px-3"></input>
-                <Button>Buscar</Button>
+                <Button color="transparent">Buscar</Button>
             </div>
         </header>
     )
