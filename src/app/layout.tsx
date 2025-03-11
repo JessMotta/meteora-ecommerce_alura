@@ -4,6 +4,7 @@ import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Newsletter } from "@/components/Newsletter";
 import { Metadata } from "next";
+import { Info } from "@/components/Info";
 
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className="antialiased">
         <Header/>
         {children}
+        <Info/>
         <Newsletter/>
         <Footer/>
       </body>
