@@ -4,39 +4,39 @@ import Image from "next/image";
 const categories = [
     {
         title: 'Camisetas',
-        image: '/products/catCamiseta.jpg',
+        image: '/categories/catCamiseta.jpg',
         alt: 'Imagem de camiseta',
     },
     {
         title: 'Bolsas',
-        image: '/products/catBolsa.jpg',
+        image: '/categories/catBolsa.jpg',
         alt: 'Imagem de bolsa',
     },
     {
         title: 'Calçados',
-        image: '/products/catCalcado.jpg',
+        image: '/categories/catCalcado.jpg',
         alt: 'Imagem de calçado',
     },
     {
         title: 'Calças',
-        image: '/products/catCalca.jpg',
+        image: '/categories/catCalca.jpg',
         alt: 'Imagem de calça',
     },
     {
         title: 'Casacos',
-        image: '/products/catCasaco.jpg',
+        image: '/categories/catCasaco.jpg',
         alt: 'Imagem de casaco',
     },
     {
         title: 'Óculos',
-        image: '/products/catOculos.jpg',
+        image: '/categories/catOculos.jpg',
         alt: 'Imagem de óculos',
     }
 ]
 
 export function CardCat() {
     return (
-        <div className="text-center font-medium">
+        <div className="text-center font-medium my-18">
             <h2 className="text-[32px]">Busque por categoria:</h2>
             <div className="flex justify-center gap-[30px] mt-8 mb-11">
                 {categories.map((category, index) => (
