@@ -48,7 +48,7 @@ const products =[
 
 export function CardProduct() {
     return (
-        <div className="grid grid-cols-3 w-[1110px] gap-[30px] mx-auto mt-8 mb-11">
+        <div className="grid container gap-[30px] mx-auto mt-8 mb-11 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             {products.map(product => (
                 <div key={product.id} className="flex flex-col gap-2 justify-start items-start w-[350px] border border-[#00000021] pb-4">
                 <Image src={product.image} width={350} height={422} alt="Product" />
