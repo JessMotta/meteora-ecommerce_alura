@@ -48,10 +48,10 @@ const products =[
 
 export function CardProduct() {
     return (
-        <div className="grid container gap-[30px] mx-auto mt-8 mb-11 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid gap-7 mt-8 justify-items-center items-center lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             {products.map(product => (
-                <div key={product.id} className="flex flex-col gap-2 justify-start items-start w-[350px] border border-[#00000021] pb-4">
-                <Image src={product.image} width={350} height={422} alt="Product" />
+                <div key={product.id} className="flex flex-col gap-2 justify-start items-start lg:max-w-[350px] border border-[#00000021] pb-4 max-w-[300px]">
+                <Image src={product.image} width={350} height={422} alt="Product"/>
                 <div className="ml-4 flex flex-col gap-2 items-start">
                     <p className="font-bold">{product.title}</p>
                     <p className="text-sm">{product.description}</p>
