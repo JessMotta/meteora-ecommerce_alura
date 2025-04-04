@@ -36,7 +36,7 @@ const categories = [
 
 export function CardCat() {
     return (
-        <div className="flex justify-center gap-[30px] mt-8 mb-11">
+        <div className="flex flex-wrap justify-center gap-[30px] mt-8 mb-11">
             {categories.map((category, index) => (
                 <div key={index} className="max-w-40">
                     <Image src={category.image} width={160} height={72} alt={category.alt} className='mr-6' />
