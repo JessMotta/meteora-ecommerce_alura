@@ -22,8 +22,8 @@ export function Newsletter() {
                         <input type="text" placeholder="Digite seu e-mail"
                             className="border-1 border-black  placeholder:text-(--color-gray) py-2 px-4 w-full "
                         />
-                        {/* ajustar para usar esse botão usando o componente Button */}
-                        <button type="submit" onClick={handleOpenModal} >Enviar</button>
+                        {/* adicionar o evento de envio do email */}
+                        <Button onClickFunction={handleOpenModal} >Enviar</Button>
                     </Form>
                 </div>
             </div>

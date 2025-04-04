@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/helpers/cn";
 
-export default function Button({onClickFunction, children, color = "purple" }: {onClickFunction: () => void , typeButton:string, children: React.ReactNode; color?: 'transparent' | 'purple' | 'black'; className?: string }) {
+export default function Button({onClickFunction, children, color = "purple" }: {onClickFunction: () => void , children: React.ReactNode; color?: 'transparent' | 'purple' | 'black'; className?: string }) {
     const defaultButtonClasses = 'cursor-pointer border-1 px-3 py-2 font-medium'
 
     const colors = {
