@@ -56,7 +56,7 @@ export function CardProduct() {
                     <p className="font-bold">{product.title}</p>
                     <p className="text-sm">{product.description}</p>
                     <p className="font-bold">R$ {product.price}</p>
-                    <Button>Ver mais</Button>
+                    <Button onClickFunction={()=>{}}>Ver mais</Button>
                 </div>
             </div>
             ))}
