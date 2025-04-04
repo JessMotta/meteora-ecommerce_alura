@@ -76,9 +76,54 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
                         <div className="flex flex-col items-start justify-between gap-6 max-w-2xs">
                             <p className="font-bold text-base">{products[3].title}</p>
                             <p className="text-sm">{products[3].description}</p>
-                            <hr className="bg-black h-px w-full"/>
+                            <hr className="border-black h-px w-full" />
                             <p className="font-medium text-xl">{`R$ ${products[3].price}`}</p>
                             <p className="text-sm text-[#ADB5BD]">Vendido e entregue por Riachuelo</p>
+                        </div>
+                            <hr className="border-[#D8D8D8] h-px w-full mt-4 " />
+                        <div className="flex flex-col items-start justify-between gap-6 max-w-2xs mt-4">
+                            <p className="font-bold text-sm">Cores:</p>
+                            <div className="flex justify-between items-center gap-4">
+                                <div className="flex flex-col gap-2">
+                                    <input type="radio" id="color1" name="color_clothes" value="Azul Claro" className="text-sm" />
+                                    <label about="color_clothes" className="text-sm">Azul Claro</label>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <input type="radio" id="color2" name="color_clothes" value="Offwhite" className="text-sm" />
+                                    <label about="color_clothes" className="text-sm">Offwhite</label>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <input type="radio" id="color3" name="color_clothes" value="Preto" className="text-sm" />
+                                    <label about="color_clothes" className="text-sm">Preto</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr className="border-[#D8D8D8] h-px w-full mt-4 " />
+                        <div className="flex flex-col items-start justify-between gap-6 max-w-2xs mt-4">
+                            <p className="font-bold text-sm">Tamanho:</p>
+                            <div className="flex justify-between items-center gap-4">
+                                <div className="flex flex-col gap-2">
+                                    <input type="radio" id="sizeP" name="size_clothes" value="Preto" className="text-sm" />
+                                    <label about="size_clothes" className="text-sm">P</label>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <input type="radio" id="sizePP" name="size_clothes" value="Preto" className="text-sm" />
+                                    <label about="size_clothes" className="text-sm">PP</label>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <input type="radio" id="sizeM" name="size_clothes" value="Preto" className="text-sm" />
+                                    <label about="size_clothes" className="text-sm">M</label>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <input type="radio" id="sizeG" name="size_clothes" value="Preto" className="text-sm" />
+                                    <label about="size_clothes" className="text-sm">G</label>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <input type="radio" id="sizeGG" name="size_clothes" value="Preto" className="text-sm" />
+                                    <label about="size_clothes" className="text-sm">GG</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
