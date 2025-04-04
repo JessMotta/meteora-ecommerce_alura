@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --color-gray: #6C757D;
   --color-gray-brand: #CCC;
+  --color-gray-mobile: #343A40;
+  --color-gray-mobile2: #CED4DA;
   --color-primary: #DAFF01;
   --color-secondary: #9353FF;
   --color-orange: #F87F46;
