@@ -26,6 +26,7 @@ export default function Home() {
       <div className="m-auto ">
         <Carousel />
       </div>
+
       <div className="text-center font-medium my-18">
         <h2 className="md:text-[32px] text-[28px]">Busque por categoria:</h2>
         <CardCat />
