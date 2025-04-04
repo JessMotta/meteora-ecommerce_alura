@@ -7,7 +7,7 @@ export interface SearchBarInterface{
 }
 
 const menu:string = 'bg-white text-black placeholder-(--color-gray)';
-const notMenu:string = 'bg-white border-black border-1 placeholder-(--color-gray)';
+const notMenu:string = 'bg-white border-black border-1 placeholder-(--color-gray) w-full ';
 
 export function SearchBar(props: SearchBarInterface) {
     return (

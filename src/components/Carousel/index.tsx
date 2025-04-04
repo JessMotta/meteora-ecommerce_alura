@@ -64,7 +64,7 @@ export default function Carousel() {
 
     return (
         <div>
-            <div className="overflow-hidden relative ">
+            <div className="overflow-hidden relative z-0">
                 <div className="w-screen h-[415px] flex transition ease-out duration-400" style={{ transform: `translateX(-${current * 100}%)` }}>
                     {slides.map((slide, index) => (
                         <Image key={index} src={slide} alt={`Slide ${index + 1}`} className="min-w-[100vw] h-full" width={1400} height={415} />

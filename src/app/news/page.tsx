@@ -1,7 +1,7 @@
-
 export default function News() {
-    return (
+  return (
+    <>
       <div>Página sobre as novidades</div>
-    )
-  }
-  
+    </>
+  )
+}
