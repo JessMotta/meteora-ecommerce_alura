@@ -1,13 +1,31 @@
+'use client'
 import Image from "next/image";
 import { FaRegCircleCheck, FaXmark } from "react-icons/fa6"
+import Button from "../Button";
+import ProductDetails from "../ProductDetails";
 
 export interface DialogProductInterface {
     isOpen: boolean;
     onClose: () => void;
 }
 
+export interface ProductDetailsProps{
+        id: number;
+        title: string;
+        image: string;
+        description: string;
+        price: string;
+        sizes: Array<{
+            id: number;
+            name: string;
+        }>
+        colors: Array<{
+            id: number;
+            name: string;
+        }>
+}
 
-export default function DialogProduct({ isOpen, onClose }: DialogProductInterface) {
+export default function DialogProduct({ isOpen, onClose }: DialogProductInterface, props : ProductDetailsProps) {
     const products = [
         {
             id: 1,
@@ -15,6 +33,18 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
             image: "/products/camisetaConforto.jpg",
             description: "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
             price: "70,00",
+            sizes: [
+                { id: 1, name: "P" },
+                { id: 2, name: "PP" },
+                { id: 3, name: "M" },
+                { id: 4, name: "G" },
+                { id: 5, name: "GG" },
+            ],
+            colors: [
+                { id: 1, name: "Azul Claro" },
+                { id: 2, name: "Offwhite" },
+                { id: 3, name: "Preto" },
+            ]
         },
         {
             id: 2,
@@ -22,6 +52,16 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
             image: "/products/calcaAlfaiataria.jpg",
             description: "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
             price: "180,00",
+            sizes: [
+                { id: 1, name: "P" },
+                { id: 2, name: "M" },
+                { id: 3, name: "GG" },
+            ],
+            colors: [
+                { id: 1, name: "Branco" },
+                { id: 2, name: "Rosa" },
+                { id: 3, name: "Laranja" },
+            ]
         },
         {
             id: 3,
@@ -29,6 +69,16 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
             image: "/products/tenisChunky.jpg",
             description: "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
             price: "250,00",
+            sizes: [
+                { id: 1, name: "PP" },
+                { id: 2, name: "M" },
+                { id: 3, name: "G" },
+    
+            ],
+            colors: [
+                { id: 1, name: "Preto" },
+                { id: 2, name: "Branco" },
+            ]
         },
         {
             id: 4,
@@ -36,6 +86,18 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
             image: "/products/jaquetaJeans.jpg",
             description: "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
             price: "150,00",
+            sizes: [
+                { id: 1, name: "P" },
+                { id: 2, name: "PP" },
+                { id: 3, name: "M" },
+                { id: 4, name: "G" },
+                { id: 5, name: "GG" },
+            ],
+            colors: [
+                { id: 1, name: "Azul Claro" },
+                { id: 2, name: "Offwhite" },
+                { id: 3, name: "Preto" },
+            ]
         },
         {
             id: 5,
@@ -43,6 +105,12 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
             image: "/products/oculosRedondo.jpg",
             description: "Armação metálica em grafite com lentes arredondadas. Sem erro!",
             price: "120,00",
+            sizes: [
+                { id: 1, name: "U" },
+            ],
+            colors: [
+                { id: 1, name: "Preto" },
+            ]
         },
         {
             id: 6,
@@ -50,6 +118,14 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
             image: "/products/bolsaCoringa.jpg",
             description: "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
             price: "120,00",
+            sizes: [
+                { id: 1, name: "U" },
+            ],
+            colors: [
+                { id: 1, name: "Caramelo" },
+                { id: 2, name: "Offwhite" },
+                { id: 3, name: "Vermelho" },
+            ]
         },
     ]
 
@@ -59,6 +135,7 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
         <div className="fixed inset-0 flex justify-center items-center z-50">
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="relative w-[700px] shadow-[0_4px_15px_0_rgba(44, 63, 88, 0.35)]">
+                {/* cabeçalho onde tem o icone de check e o x para fechar o modal */}
                 <div className="bg-black z-100 text-white flex justify-between items-center px-4 py-5">
                     <div className="flex items-center">
                         <FaRegCircleCheck className="text-primary text-[32px]" />
@@ -68,8 +145,9 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
                         <FaXmark className="text-gray text-xl" />
                     </button>
                 </div>
+               {/*  estrutura onde o produto é exibido */}
                 <div className="bg-white px-4 pt-4 pb-8 flex justify-between gap-4 px-4">
-                    <div>
+                    <div className="h-full">
                         <Image src={products[3].image} alt="Imagem da roupa" width={350} height={422} />
                     </div>
                     <div className="w-[318px]">
@@ -81,50 +159,8 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
                             <p className="text-sm text-[#ADB5BD]">Vendido e entregue por Riachuelo</p>
                         </div>
                             <hr className="border-[#D8D8D8] h-px w-full mt-4 " />
-                        <div className="flex flex-col items-start justify-between gap-6 max-w-2xs mt-4">
-                            <p className="font-bold text-sm">Cores:</p>
-                            <div className="flex justify-between items-center gap-4">
-                                <div className="flex flex-col gap-2">
-                                    <input type="radio" id="color1" name="color_clothes" value="Azul Claro" className="text-sm" />
-                                    <label about="color_clothes" className="text-sm">Azul Claro</label>
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                    <input type="radio" id="color2" name="color_clothes" value="Offwhite" className="text-sm" />
-                                    <label about="color_clothes" className="text-sm">Offwhite</label>
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                    <input type="radio" id="color3" name="color_clothes" value="Preto" className="text-sm" />
-                                    <label about="color_clothes" className="text-sm">Preto</label>
-                                </div>
-
-                            </div>
-                        </div>
-                        <hr className="border-[#D8D8D8] h-px w-full mt-4 " />
-                        <div className="flex flex-col items-start justify-between gap-6 max-w-2xs mt-4">
-                            <p className="font-bold text-sm">Tamanho:</p>
-                            <div className="flex justify-between items-center gap-4">
-                                <div className="flex flex-col gap-2">
-                                    <input type="radio" id="sizeP" name="size_clothes" value="Preto" className="text-sm" />
-                                    <label about="size_clothes" className="text-sm">P</label>
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                    <input type="radio" id="sizePP" name="size_clothes" value="Preto" className="text-sm" />
-                                    <label about="size_clothes" className="text-sm">PP</label>
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                    <input type="radio" id="sizeM" name="size_clothes" value="Preto" className="text-sm" />
-                                    <label about="size_clothes" className="text-sm">M</label>
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                    <input type="radio" id="sizeG" name="size_clothes" value="Preto" className="text-sm" />
-                                    <label about="size_clothes" className="text-sm">G</label>
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                    <input type="radio" id="sizeGG" name="size_clothes" value="Preto" className="text-sm" />
-                                    <label about="size_clothes" className="text-sm">GG</label>
-                                </div>
-                            </div>
-                        </div>
+                        <ProductDetails colors={products[3].colors} sizes={products[3].sizes} />
+                    <Button onClickFunction={() =>{}}>Adicionar à sacola</Button>
                     </div>
 
                 </div>
