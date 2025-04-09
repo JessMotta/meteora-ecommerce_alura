@@ -4,11 +4,117 @@ import { FaRegCircleCheck, FaXmark } from "react-icons/fa6"
 import Button from "../Button";
 import ProductDetails from "../ProductDetails";
 
+
+const products = [
+    {
+        id: 1,
+        title: "Camiseta Conforto",
+        image: "/products/camisetaConforto.jpg",
+        description: "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
+        price: "70,00",
+        sizes: [
+            { id: 1, name: "P" },
+            { id: 2, name: "PP" },
+            { id: 3, name: "M" },
+            { id: 4, name: "G" },
+            { id: 5, name: "GG" },
+        ],
+        colors: [
+            { id: 1, name: "Azul Claro" },
+            { id: 2, name: "Offwhite" },
+            { id: 3, name: "Preto" },
+        ]
+    },
+    {
+        id: 2,
+        title: "Calça Alfaiataria",
+        image: "/products/calcaAlfaiataria.jpg",
+        description: "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
+        price: "180,00",
+        sizes: [
+            { id: 1, name: "P" },
+            { id: 2, name: "M" },
+            { id: 3, name: "GG" },
+        ],
+        colors: [
+            { id: 1, name: "Branco" },
+            { id: 2, name: "Rosa" },
+            { id: 3, name: "Laranja" },
+        ]
+    },
+    {
+        id: 3,
+        title: "Tênis Chunky",
+        image: "/products/tenisChunky.jpg",
+        description: "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
+        price: "250,00",
+        sizes: [
+            { id: 1, name: "PP" },
+            { id: 2, name: "M" },
+            { id: 3, name: "G" },
+
+        ],
+        colors: [
+            { id: 1, name: "Preto" },
+            { id: 2, name: "Branco" },
+        ]
+    },
+    {
+        id: 4,
+        title: "Jaqueta Jeans",
+        image: "/products/jaquetaJeans.jpg",
+        description: "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
+        price: "150,00",
+        sizes: [
+            { id: 1, name: "P" },
+            { id: 2, name: "PP" },
+            { id: 3, name: "M" },
+            { id: 4, name: "G" },
+            { id: 5, name: "GG" },
+        ],
+        colors: [
+            { id: 1, name: "Azul Claro" },
+            { id: 2, name: "Offwhite" },
+            { id: 3, name: "Preto" },
+        ]
+    },
+    {
+        id: 5,
+        title: "Óculos Redondo",
+        image: "/products/oculosRedondo.jpg",
+        description: "Armação metálica em grafite com lentes arredondadas. Sem erro!",
+        price: "120,00",
+        sizes: [
+            { id: 1, name: "U" },
+        ],
+        colors: [
+            { id: 1, name: "Preto" },
+        ]
+    },
+    {
+        id: 6,
+        title: "Bolsa Coringa",
+        image: "/products/bolsaCoringa.jpg",
+        description: "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
+        price: "120,00",
+        sizes: [
+            { id: 1, name: "U" },
+        ],
+        colors: [
+            { id: 1, name: "Caramelo" },
+            { id: 2, name: "Offwhite" },
+            { id: 3, name: "Vermelho" },
+        ]
+    },
+]
+
+
 export interface DialogProductInterface {
     isOpen: boolean;
     onClose: () => void;
+    productId?: number;
 }
-
+/* 
 export interface ProductDetailsProps{
         id: number;
         title: string;
@@ -23,113 +129,14 @@ export interface ProductDetailsProps{
             id: number;
             name: string;
         }>
-}
+} */
 
-export default function DialogProduct({ isOpen, onClose }: DialogProductInterface, props : ProductDetailsProps) {
-    const products = [
-        {
-            id: 1,
-            title: "Camiseta Conforto",
-            image: "/products/camisetaConforto.jpg",
-            description: "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
-            price: "70,00",
-            sizes: [
-                { id: 1, name: "P" },
-                { id: 2, name: "PP" },
-                { id: 3, name: "M" },
-                { id: 4, name: "G" },
-                { id: 5, name: "GG" },
-            ],
-            colors: [
-                { id: 1, name: "Azul Claro" },
-                { id: 2, name: "Offwhite" },
-                { id: 3, name: "Preto" },
-            ]
-        },
-        {
-            id: 2,
-            title: "Calça Alfaiataria",
-            image: "/products/calcaAlfaiataria.jpg",
-            description: "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
-            price: "180,00",
-            sizes: [
-                { id: 1, name: "P" },
-                { id: 2, name: "M" },
-                { id: 3, name: "GG" },
-            ],
-            colors: [
-                { id: 1, name: "Branco" },
-                { id: 2, name: "Rosa" },
-                { id: 3, name: "Laranja" },
-            ]
-        },
-        {
-            id: 3,
-            title: "Tênis Chunky",
-            image: "/products/tenisChunky.jpg",
-            description: "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
-            price: "250,00",
-            sizes: [
-                { id: 1, name: "PP" },
-                { id: 2, name: "M" },
-                { id: 3, name: "G" },
+export default function DialogProduct({ isOpen, onClose, productId }: DialogProductInterface) {
     
-            ],
-            colors: [
-                { id: 1, name: "Preto" },
-                { id: 2, name: "Branco" },
-            ]
-        },
-        {
-            id: 4,
-            title: "Jaqueta Jeans",
-            image: "/products/jaquetaJeans.jpg",
-            description: "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
-            price: "150,00",
-            sizes: [
-                { id: 1, name: "P" },
-                { id: 2, name: "PP" },
-                { id: 3, name: "M" },
-                { id: 4, name: "G" },
-                { id: 5, name: "GG" },
-            ],
-            colors: [
-                { id: 1, name: "Azul Claro" },
-                { id: 2, name: "Offwhite" },
-                { id: 3, name: "Preto" },
-            ]
-        },
-        {
-            id: 5,
-            title: "Óculos Redondo",
-            image: "/products/oculosRedondo.jpg",
-            description: "Armação metálica em grafite com lentes arredondadas. Sem erro!",
-            price: "120,00",
-            sizes: [
-                { id: 1, name: "U" },
-            ],
-            colors: [
-                { id: 1, name: "Preto" },
-            ]
-        },
-        {
-            id: 6,
-            title: "Bolsa Coringa",
-            image: "/products/bolsaCoringa.jpg",
-            description: "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
-            price: "120,00",
-            sizes: [
-                { id: 1, name: "U" },
-            ],
-            colors: [
-                { id: 1, name: "Caramelo" },
-                { id: 2, name: "Offwhite" },
-                { id: 3, name: "Vermelho" },
-            ]
-        },
-    ]
+    if(!isOpen) return null;
 
-    //if(!isOpen) return null;
+    const product = products.find((product) => product.id === productId);
+    if (!product) return null; // Handle case where product is not found
 
     return (
         <div className="fixed inset-0 flex justify-center items-center z-50">
@@ -148,18 +155,18 @@ export default function DialogProduct({ isOpen, onClose }: DialogProductInterfac
                {/*  estrutura onde o produto é exibido */}
                 <div className="bg-white px-4 pt-4 pb-8 flex justify-between gap-4 px-4">
                     <div className="h-full">
-                        <Image src={products[3].image} alt="Imagem da roupa" width={350} height={422} />
+                        <Image src={product.image} alt="Imagem da roupa" width={350} height={422} />
                     </div>
                     <div className="w-[318px]">
                         <div className="flex flex-col items-start justify-between gap-6 max-w-2xs">
-                            <p className="font-bold text-base">{products[3].title}</p>
-                            <p className="text-sm">{products[3].description}</p>
+                            <p className="font-bold text-base">{product.title}</p>
+                            <p className="text-sm">{product.description}</p>
                             <hr className="border-black h-px w-full" />
-                            <p className="font-medium text-xl">{`R$ ${products[3].price}`}</p>
+                            <p className="font-medium text-xl">{`R$ ${product.price}`}</p>
                             <p className="text-sm text-[#ADB5BD]">Vendido e entregue por Riachuelo</p>
                         </div>
                             <hr className="border-[#D8D8D8] h-px w-full mt-4 " />
-                        <ProductDetails colors={products[3].colors} sizes={products[3].sizes} />
+                        <ProductDetails colors={product.colors} sizes={product.sizes} />
                     <Button onClickFunction={() =>{}}>Adicionar à sacola</Button>
                     </div>
 
