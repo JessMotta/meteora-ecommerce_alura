@@ -114,22 +114,6 @@ export interface DialogProductInterface {
     onClose: () => void;
     productId?: number;
 }
-/* 
-export interface ProductDetailsProps{
-        id: number;
-        title: string;
-        image: string;
-        description: string;
-        price: string;
-        sizes: Array<{
-            id: number;
-            name: string;
-        }>
-        colors: Array<{
-            id: number;
-            name: string;
-        }>
-} */
 
 export default function DialogProduct({ isOpen, onClose, productId }: DialogProductInterface) {
     
@@ -141,7 +125,7 @@ export default function DialogProduct({ isOpen, onClose, productId }: DialogProd
     return (
         <div className="fixed inset-0 flex justify-center items-center z-50">
             <div className="absolute inset-0 bg-black opacity-50"></div>
-            <div className="relative w-[700px] shadow-[0_4px_15px_0_rgba(44, 63, 88, 0.35)]">
+            <div className="relative overflow-y-auto max-w-[700px] w-full max-h-screen shadow-[0_4px_15px_0_rgba(44, 63, 88, 0.35)]">
                 {/* cabeçalho onde tem o icone de check e o x para fechar o modal */}
                 <div className="bg-black z-100 text-white flex justify-between items-center px-4 py-5">
                     <div className="flex items-center">
@@ -153,11 +137,11 @@ export default function DialogProduct({ isOpen, onClose, productId }: DialogProd
                     </button>
                 </div>
                {/*  estrutura onde o produto é exibido */}
-                <div className="bg-white px-4 pt-4 pb-8 flex justify-between gap-4 px-4">
+                <div className="bg-white px-4 pt-4 pb-8 flex md:flex-row flex-col justify-between md:items-start items-center gap-4">
                     <div className="h-full">
-                        <Image src={product.image} alt="Imagem da roupa" width={350} height={422} />
+                        <Image src={product.image} alt="Imagem da roupa" width={350} height={422} className="max-w-full max-h-full md:max-w-[350px] md:max-h-[422px]" />
                     </div>
-                    <div className="w-[318px]">
+                    <div className="max-w-[318px]">
                         <div className="flex flex-col items-start justify-between gap-6 max-w-2xs">
                             <p className="font-bold text-base">{product.title}</p>
                             <p className="text-sm">{product.description}</p>
