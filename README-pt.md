@@ -4,7 +4,7 @@
 
 📄 [Read this README in English](README.md)
 
-Este projeto foi desenvolvido com base no layout fornecido pela Alura, disponível no Figma:
+Este projeto é uma plataforma de e-commerce fictício que vende roupa atemporal e unissex, foi desenvolvido com um design moderno e responsivo. O projeto foi desenvolvido com base no layout fornecido pela Alura, disponível no Figma:
 
 🎨 [Visualizar Design no Figma](https://www.figma.com/design/2TLgt8UjsWUViWlmpXu5Fz/Challenge-Front-end-%7C-Loja-Meteora?node-id=2386-2430&t=hIerujrsdlQwxXJq-1)
 
