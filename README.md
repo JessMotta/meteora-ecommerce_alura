@@ -2,6 +2,7 @@
 
 # 💼 Meteora Alura - Frontend Project
 
+📄 [Leia este README em Português](README-pt.md)
 This project was developed based on a layout provided by Alura, available on Figma:
 
 🎨 [View Design on Figma](https://www.figma.com/design/2TLgt8UjsWUViWlmpXu5Fz/Challenge-Front-end-%7C-Loja-Meteora?node-id=2386-2430&t=hIerujrsdlQwxXJq-1)
@@ -57,4 +58,5 @@ Then open your browser and go to:
 ---
 
 > 📌 Project developed with a focus on performance and responsiveness, following Frontend best practices.
+
 
