@@ -20,9 +20,9 @@ const products = [
             { id: 5, name: "GG" },
         ],
         colors: [
-            { id: 1, name: "Azul Claro" },
-            { id: 2, name: "Offwhite" },
-            { id: 3, name: "Preto" },
+            { id: 1, name: "Azul Claro", hex:"#4cdcfc" },
+            { id: 2, name: "Offwhite", hex:"#eef5f7" },
+            { id: 3, name: "Preto", hex:"#000000" },
         ]
     },
     {
@@ -37,9 +37,9 @@ const products = [
             { id: 3, name: "GG" },
         ],
         colors: [
-            { id: 1, name: "Branco" },
-            { id: 2, name: "Rosa" },
-            { id: 3, name: "Laranja" },
+            { id: 1, name: "Branco", hex:"#ffffff" },
+            { id: 2, name: "Rosa", hex:"#e21e9b" },
+            { id: 3, name: "Laranja", hex:"#f1830e" },
         ]
     },
     {
@@ -55,8 +55,8 @@ const products = [
 
         ],
         colors: [
-            { id: 1, name: "Preto" },
-            { id: 2, name: "Branco" },
+            { id: 1, name: "Preto", hex:"#000000" },
+            { id: 2, name: "Branco", hex:"#ffffff" },
         ]
     },
     {
@@ -73,9 +73,9 @@ const products = [
             { id: 5, name: "GG" },
         ],
         colors: [
-            { id: 1, name: "Azul Claro" },
-            { id: 2, name: "Offwhite" },
-            { id: 3, name: "Preto" },
+            { id: 1, name: "Azul Claro", hex:"#4cdcfc" },
+            { id: 2, name: "Offwhite", hex:"#eef5f7" },
+            { id: 3, name: "Preto", hex:"#000000" },
         ]
     },
     {
@@ -88,7 +88,7 @@ const products = [
             { id: 1, name: "U" },
         ],
         colors: [
-            { id: 1, name: "Preto" },
+            { id: 1, name: "Preto", hex: "#000000" },
         ]
     },
     {
@@ -101,9 +101,9 @@ const products = [
             { id: 1, name: "U" },
         ],
         colors: [
-            { id: 1, name: "Caramelo" },
-            { id: 2, name: "Offwhite" },
-            { id: 3, name: "Vermelho" },
+            { id: 1, name: "Caramelo", hex:"#c46902" },
+            { id: 2, name: "Offwhite", hex:"#eef5f7" },
+            { id: 3, name: "Vermelho", hex:"#e22d1e" },
         ]
     },
 ]

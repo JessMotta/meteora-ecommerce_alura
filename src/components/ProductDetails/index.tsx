@@ -9,6 +9,7 @@ interface ProductDetailsProps {
     colors: Array<{
         id: number;
         name: string;
+        hex: string;
     }>;
 }
 
