@@ -23,17 +23,24 @@ export default function Header() {
 
     const [searchBar, setSearchBar] = useState<boolean>(false);
 
-    const screenWidth = window.innerWidth;
 
     const pathname = usePathname();
+ 
 
-    useEffect(() => {
-        if(screenWidth >= 768) {
-            setSearchBar(true);
-        }else {
-            setSearchBar(false);
+    const updateScreenSize = () => {
+        const width = window.innerWidth;
+        if (width < 768) {
+          setSearchBar(false);
+        } else {
+          setSearchBar(true);
         }
-    }, [screenWidth]);
+      }
+    
+      useEffect(() => {
+        updateScreenSize();
+        window.addEventListener('resize', updateScreenSize);
+        return () => window.removeEventListener('resize', updateScreenSize);
+      }, []);
 
     return (
         <header className="h-[54px] bg-black text-white px-5 ">
@@ -42,10 +49,10 @@ export default function Header() {
                     <Link href="/">
                         <Image src="/logo.svg" alt="Logo" width={200} height={54} />
                     </Link>
-                    <ul className={`lg:flex justify-start items-center space-x-4 lg:pl-10 pl-6 px-6 ${openMenu ? "block absolute top-0 right-0 w-fit h-auto py-3 bg-gray-mobile pt-10" : "hidden"}`}>
+                    <ul className={`lg:flex justify-start items-center space-x-4 lg:pl-10 pl-6 px-6 ${openMenu ? "block absolute top-0 right-0 w-fit h-auto py-3 bg-gray-mobile pt-10 z-10" : "hidden"}`}>
                         {itemsMenu.map((item, index) => (
-                            <li key={index} className={`lg:pl-5 text-white font-normal ${openMenu ? "pl-0 py-2 border-b-2 border-gray-mobile2" : "pl-5"} ${pathname === item.link ? "text-primary font-bold" : ""}`} >
-                                <Link href={item.link}>{item.title}</Link>
+                            <li key={index} className={`lg:pl-5 text-white font-normal ${openMenu ? "pl-0 py-2 border-b-2 border-gray-mobile2" : "pl-5"} `} >
+                                <Link className={`${pathname === item.link ? "text-primary font-bold" : ""}`} href={item.link}>{item.title}</Link>
                             </li>
                         ))}
                     </ul>

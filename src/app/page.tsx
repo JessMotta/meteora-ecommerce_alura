@@ -8,17 +8,21 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [searchBar, setSearchBar] = useState<boolean>(false);
 
-  const screenWidth = window.innerWidth;
-
-
-
-  useEffect(() => {
-    if (screenWidth < 768) {
+  
+  const updateScreenSize = () => {
+    const width = window.innerWidth;
+    if (width < 768) {
       setSearchBar(true);
     } else {
       setSearchBar(false);
     }
-  }, [screenWidth]);
+  }
+
+  useEffect(() => {
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+    return () => window.removeEventListener('resize', updateScreenSize);
+  }, []);
 
   return (
     <div>

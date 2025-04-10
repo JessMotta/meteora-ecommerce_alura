@@ -1,7 +1,15 @@
 import React from "react";
 import { cn } from "@/helpers/cn";
 
-export default function Button({children, color = "purple"} : {children : React.ReactNode; color? : 'transparent' | 'purple' | 'black'; className? : string}) {
+interface ButtonProps {
+    onClickFunction: (productId : number) =>  void;
+    productId?: number;
+    children: React.ReactNode;
+    color?: 'transparent' | 'purple' | 'black';
+    className?: string;
+}
+
+export default function Button({onClickFunction, productId, children, color = "purple" }: ButtonProps) {
     const defaultButtonClasses = 'cursor-pointer border-1 px-3 py-2 font-medium'
 
     const colors = {
@@ -10,8 +18,13 @@ export default function Button({children, color = "purple"} : {children : React.
         black: 'bg-white border-black text-black hover:bg-black hover:text-white hover:border-black',
     }
     return (
-        <button className={cn(defaultButtonClasses, colors[color])}
-        >{children}</button>
+        <button className={cn(defaultButtonClasses, colors[color])} onClick={() => {
+            if(typeof productId === 'number') {
+                onClickFunction(productId)}
+            }
+        }>
+        
+            {children}</button>
     )
 }
 
