@@ -1,6 +1,6 @@
 ### 🇧🇷 README - Projeto Meteora Alura
 
-# 🛍️ Meteora Alura - Projeto Frontend
+# 🛍️ Meteora E-commerce Alura - Projeto Frontend
 
 📄 [Read this README in English](README.md)
 
