@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### 🇺🇸 README - Meteora Alura Project
 
-## Getting Started
+# 💼 Meteora Alura - Frontend Project
 
-First, run the development server:
+📄 [Leia este README em Português](README-pt.md)
+This project was developed based on a layout provided by Alura, available on Figma:
+
+🎨 [View Design on Figma](https://www.figma.com/design/2TLgt8UjsWUViWlmpXu5Fz/Challenge-Front-end-%7C-Loja-Meteora?node-id=2386-2430&t=hIerujrsdlQwxXJq-1)
+
+---
+
+## 🚀 Technologies Used
+
+<div>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" height="30" width="40" alt="TypeScript"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" height="30" width="40" alt="Next.js"/>
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" height="30" width="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" height="30" with="40" />
+</div>
+
+
+---
+
+## 🧽 How to Run the Project
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/JessMotta/meteora-ecommerce_alura.git
+cd meteora-ecommerce_alura
+npm install
+```
+
+### 🔧 Run in Development Mode
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🏁 Run in Production Mode
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+# or
+yarn build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+npm run start
+# or
+yarn start
+```
 
-## Learn More
+Then open your browser and go to:
 
-To learn more about Next.js, take a look at the following resources:
+👉 [http://localhost:3000](http://localhost:3000)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> 📌 Project developed with a focus on performance and responsiveness, following Frontend best practices.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
